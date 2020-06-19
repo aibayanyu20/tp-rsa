@@ -38,8 +38,8 @@ class RSACommand extends Command
                 $rsa = $a->create();
             }
             file_put_contents($path,
-                PHP_EOL."[RSA]".PHP_EOL."PUBLIC_KEY={$rsa['public_key']}".PHP_EOL.
-                "PRIVATE_KEY={$rsa['private_key']}".PHP_EOL,
+                PHP_EOL."[RSA]".PHP_EOL."PUBLIC_KEY=\"{$rsa['public_key']}\"".PHP_EOL.
+                "PRIVATE_KEY=\"{$rsa['private_key']}\"".PHP_EOL,
                 FILE_APPEND);
             $output->writeln('RSA config create finish');
         }
