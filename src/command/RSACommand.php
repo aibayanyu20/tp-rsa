@@ -12,6 +12,7 @@ use aibayanyu\rsa\RSA;
 use think\console\Command;
 use think\console\Input;
 use think\console\Output;
+use think\Exception;
 
 class RSACommand extends Command
 {
@@ -27,7 +28,15 @@ class RSACommand extends Command
         if (file_exists($path)&& strpos(file_get_contents($path),'[RSA]')){
             $output->writeln('RSA config is exit');
         }else{
-            $rsa = new RSA();
+            $a = new RSA();
+            if (!$a->checkOs()){
+                if (! file_exists("C:\usr\local\ssl\openssl.cnf")){
+                    throw new Exception("请先将openssl.cnf放至C:\usr\local\ssl\openssl.cnf");
+                }
+                $rsa = $a->create("C:\usr\local\ssl\openssl.cnf");
+            }else{
+                $rsa = $a->create();
+            }
             file_put_contents($path,
                 PHP_EOL."[RSA]".PHP_EOL."PUBLIC_KEY={$rsa['public_key']}".PHP_EOL.
                 "PRIVATE_KEY={$rsa['private_key']}".PHP_EOL,
