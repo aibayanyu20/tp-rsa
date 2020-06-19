@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "aibayanyu\\rsa": "src/"
+            "aibayanyu\\rsa\\": "src/"
         },
         "psr-0": {
             "file": "src/helpers.php"
