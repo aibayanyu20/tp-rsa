@@ -11,7 +11,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.1",
-        "topthink/framework": "6.0.0",
+        "topthink/framework": "6.0.*",
         "aibayanyu/rsa-crypto": "1.0.0"
     },
     "autoload": {
