@@ -18,11 +18,9 @@
         "psr-4": {
             "aibayanyu\\rsa\\": "src/"
         },
-        "psr-0": {
-            "files": [
-                "src/helpers.php"
-            ]
-        }
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "type": "library",
     "version": "1.0.4",
