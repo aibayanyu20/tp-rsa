@@ -32,45 +32,49 @@ class Auth
     /**
      * 公钥加密
      * @param $data
+     * @return string
      * @throws Exception
      * @author: aibayanyu
      * Time: 2020/6/19 13:47
      */
     public function puEncrypt($data){
-        $this->rsa->puEncrypt($data);
+        return $this->rsa->puEncrypt($data);
     }
 
     /**
      * 公钥解密
      * @param $data
+     * @return string
      * @throws Exception
      * @author: aibayanyu
      * Time: 2020/6/19 13:48
      */
     public function puDecrypt($data){
-        $this->rsa->puDecrypt($data);
+       return $this->rsa->puDecrypt($data);
     }
 
     /**
      * 私钥加密
      * @param $data
+     * @return string
      * @throws Exception
      * @author: aibayanyu
      * Time: 2020/6/19 13:48
      */
     public function pkEncrypt($data){
-        $this->rsa->pkEncrypt($data);
+       return $this->rsa->pkEncrypt($data);
     }
 
     /**
      * 私钥解密
      * @param $data
+     * @return string
      * @throws Exception
      * @author: aibayanyu
      * Time: 2020/6/19 13:49
      */
     public function pkDecrypt($data){
-        $this->rsa->pkDecrypt($data);
+       return $this->rsa->pkDecrypt($data);
     }
 
 }
