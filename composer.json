@@ -22,8 +22,7 @@
       "src/helper.php"
     ]
   },
-  "type": "library",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "extra": {
     "think": {
       "config": {
