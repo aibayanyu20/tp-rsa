@@ -16,10 +16,10 @@
     },
     "autoload": {
         "psr-4": {
-            "aibayanyu\\rsa\\": "src/"
+            "aibayanyu\\rsa\\": "src"
         },
         "files": [
-            "src/helpers.php"
+            "src/helper.php"
         ]
     },
     "type": "library",
