@@ -30,10 +30,10 @@ class RSACommand extends Command
         }else{
             $a = new RSA();
             if (!$a->checkOs()){
-                if (! file_exists("C:\usr\local\ssl\openssl.cnf")){
-                    throw new Exception("请先将openssl.cnf放至C:\usr\local\ssl\openssl.cnf");
+                if (! file_exists("..\.\ssl\openssl.cnf")){
+                    throw new Exception("请先将openssl.cnf文件不存在");
                 }
-                $rsa = $a->create("C:\usr\local\ssl\openssl.cnf");
+                $rsa = $a->create("..\.\ssl\openssl.cnf");
             }else{
                 $rsa = $a->create();
             }

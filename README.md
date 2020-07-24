@@ -1,6 +1,8 @@
 ### tp-rsa 加密解密数据方法
 > 第一次使用需要手动生成公钥和私钥
 
+> 1.0.9 修复win下openssl.cnf文件不存在的问题
+
 ```shell script
 php think rsa:create
 ```
